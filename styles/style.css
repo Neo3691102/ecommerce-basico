@@ -12,6 +12,33 @@ body {
   padding: 0;
 }
 
+.menulateralizquierdo {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  background-color: black;
+  transition: transform 0.3s ease-in-out;
+}
+.menulateralizquierdo #closemenu {
+  position: relative;
+  top: 12px;
+  left: 265px;
+  cursor: pointer;
+}
+.menulateralizquierdo #closemenu:hover {
+  fill: red;
+}
+.menulateralizquierdo .productContainer {
+  background-color: white;
+  width: 80%;
+  height: 90%;
+  position: relative;
+  top: 20px;
+  margin: 0 auto;
+}
+
 .header {
   width: 100%;
   padding: 20px 50px;
@@ -174,4 +201,12 @@ body {
   .cart div p:nth-child(3), .cart div i {
     align-self: center;
   }
+}
+.visible {
+  display: block;
+  transform: translateX(300px);
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
