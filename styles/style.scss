@@ -40,17 +40,17 @@ body {
     }
     
     width: 300px;
-    height: 100%;
+    height: 100vh;
     position: fixed;
-    top: 0;
+    top: 140px;
     left: -300px;
     background-color: black;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 
     .productContainer{
       background-color: white;
       width: 80%;
-      height: 90%;
+      height: 100vh;
       position: relative;
       
       top: 20px;
@@ -59,6 +59,13 @@ body {
 
     
   }
+
+  .visible{
+      display:block;
+      transform: translateX(300px);
+    }
+
+  
 
   .header {
     width: 100%;
@@ -132,9 +139,25 @@ body {
 
     &__price{
         font-weight: 300;
-  font-size: 15px;
+        font-size: 15px;
     }
    
+    .btn-agregarC{
+      margin-bottom: 18px;
+      width: 9rem;
+      height: 2rem;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      border-radius: 1rem;
+      
+      &:hover{
+        background-color: #fff;
+        border: 2px solid #0086DF;
+        color: black;
+        box-shadow: 3px 3px 6px gray;
+      }
+    }
   }
 
   .cart{
@@ -258,15 +281,7 @@ body {
    
   }
 
-  .visible{
-      display:block;
-      transform: translateX(300px);
-    }
-
-  .hidden{
-      display:none;
-      
-    }
+  
   
   
 
