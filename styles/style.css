@@ -13,35 +13,60 @@ body {
 }
 
 .menulateralizquierdo {
-  width: 300px;
+  width: 400px;
   height: 100vh;
   position: fixed;
   top: 140px;
-  left: -300px;
-  background-color: black;
+  left: -400px;
+  background-color: #F6FAFB;
   transition: transform 0.5s ease-in-out;
 }
 .menulateralizquierdo #closemenu {
   position: relative;
   top: 12px;
-  left: 265px;
+  left: 365px;
   cursor: pointer;
 }
 .menulateralizquierdo #closemenu:hover {
   fill: red;
 }
+.menulateralizquierdo h2 {
+  text-align: center;
+  color: black;
+  padding-bottom: 10px;
+}
 .menulateralizquierdo .productContainer {
   background-color: white;
-  width: 80%;
+  width: 95%;
   height: 100vh;
   position: relative;
-  top: 20px;
+  top: 0;
   margin: 0 auto;
 }
 
 .visible {
   display: block;
-  transform: translateX(300px);
+  transform: translateX(400px);
+}
+
+.productReview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18px;
+}
+.productReview img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.productReview p {
+  font-size: 15px;
+  font-weight: 500;
+}
+.productReview h3 {
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .header {
