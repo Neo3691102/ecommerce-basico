@@ -20,6 +20,7 @@ body {
   left: -400px;
   background-color: #F6FAFB;
   transition: transform 0.5s ease-in-out;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 .menulateralizquierdo #closemenu {
   position: relative;
@@ -38,10 +39,25 @@ body {
 .menulateralizquierdo .productContainer {
   background-color: white;
   width: 95%;
-  height: 100vh;
+  height: 40%;
   position: relative;
   top: 0;
   margin: 0 auto;
+  overflow-y: scroll;
+}
+.menulateralizquierdo .total {
+  width: 95%;
+  height: 100px;
+  position: relative;
+  bottom: 0;
+  margin: 0 auto;
+  background-color: #F6FAFB;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 500;
 }
 
 .visible {
