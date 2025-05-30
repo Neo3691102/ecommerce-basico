@@ -1,6 +1,8 @@
 const iconoMenu = document.getElementById("iconomenu");
 const closeMenu = document.getElementById("closemenu");
 const menuIzquierdo = document.getElementById("menuIzquierdo");
+const nItems = document.getElementById("numeroitems"); //para agregar el numero de items 
+
 
 const productContainer = document.querySelector(".productContainer");
 const btnP1 = document.getElementById("btn-p1");
@@ -10,6 +12,7 @@ const btnP4 = document.getElementById("btn-p4");
 const btnP5 = document.getElementById("btn-p5");
 const btnP6 = document.getElementById("btn-p6");
 
+let itemsCarrito = 0;
 let total = 0;
 const montoTotal = document.getElementById("montoxPagar"); // Elemento para mostrar el monto total
 
@@ -34,6 +37,9 @@ btnP1.addEventListener("click", () => {
   productContainer.appendChild(d1);
   total += 1000;
   montoTotal.textContent = `$${total.toString()}`;
+
+  nItems.classList.add("numItems");
+  nItems.textContent = ++itemsCarrito; 
   alert("Producto agregado al carrito");
 });
 
@@ -49,6 +55,9 @@ btnP2.addEventListener("click", () => {
   productContainer.appendChild(d2);
   total += 2000;
   montoTotal.textContent = `$${total.toString()}`;
+
+  nItems.classList.add("numItems");
+  nItems.textContent = ++itemsCarrito; 
   alert("Producto agregado al carrito");
 });
 
@@ -64,6 +73,9 @@ btnP3.addEventListener("click", () => {
   productContainer.appendChild(d3);
   total += 3000;
   montoTotal.textContent = `$${total.toString()}`;
+
+  nItems.classList.add("numItems");
+  nItems.textContent = ++itemsCarrito; 
   alert("Producto agregado al carrito");
 });
 
@@ -79,6 +91,9 @@ btnP4.addEventListener("click", () => {
   productContainer.appendChild(d4);
   total += 1000;
   montoTotal.textContent = `$${total.toString()}`;
+
+  nItems.classList.add("numItems");
+  nItems.textContent = ++itemsCarrito; 
   alert("Producto agregado al carrito");
 });
 
@@ -94,6 +109,9 @@ btnP5.addEventListener("click", () => {
   productContainer.appendChild(d5);
   total += 750;
   montoTotal.textContent = `$${total.toString()}`;
+
+  nItems.classList.add("numItems");
+  nItems.textContent = ++itemsCarrito; 
   alert("Producto agregado al carrito");
 });
 
@@ -109,5 +127,8 @@ btnP6.addEventListener("click", () => {
   productContainer.appendChild(d6);
   total += 2300;
   montoTotal.textContent = `$${total.toString()}`;
+
+  nItems.classList.add("numItems");
+  nItems.textContent = ++itemsCarrito; 
   alert("Producto agregado al carrito");
 });
