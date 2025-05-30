@@ -10,6 +10,8 @@ const btnP4 = document.getElementById("btn-p4");
 const btnP5 = document.getElementById("btn-p5");
 const btnP6 = document.getElementById("btn-p6");
 
+const montoTotal = document.getElementById("montoxPagar"); // Elemento para mostrar el monto total
+
 iconoMenu.addEventListener("click", () => {
   menuIzquierdo.classList.add("visible");
 });
