@@ -120,6 +120,19 @@ body {
   cursor: pointer;
   display: inline-block;
 }
+.header__icon .numItems {
+  color: #fff;
+  background-color: red;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: clamp(0.5rem, 0.8vw, 1rem);
+  font-weight: 600;
+  position: absolute;
+  top: 39px;
+  left: 69px;
+}
 .header__logo {
   width: 100px;
 }
