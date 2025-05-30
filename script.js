@@ -10,7 +10,9 @@ const btnP4 = document.getElementById("btn-p4");
 const btnP5 = document.getElementById("btn-p5");
 const btnP6 = document.getElementById("btn-p6");
 
+let total = 0;
 const montoTotal = document.getElementById("montoxPagar"); // Elemento para mostrar el monto total
+
 
 iconoMenu.addEventListener("click", () => {
   menuIzquierdo.classList.add("visible");
@@ -30,6 +32,8 @@ btnP1.addEventListener("click", () => {
   <img src="img/delete.png">
   `;
   productContainer.appendChild(d1);
+  total += 1000;
+  montoTotal.textContent = `$${total.toString()}`;
   alert("Producto agregado al carrito");
 });
 
@@ -43,6 +47,8 @@ btnP2.addEventListener("click", () => {
   <img src="img/delete.png">
   `;
   productContainer.appendChild(d2);
+  total += 2000;
+  montoTotal.textContent = `$${total.toString()}`;
   alert("Producto agregado al carrito");
 });
 
@@ -56,6 +62,8 @@ btnP3.addEventListener("click", () => {
   <img src="img/delete.png">
   `;
   productContainer.appendChild(d3);
+  total += 3000;
+  montoTotal.textContent = `$${total.toString()}`;
   alert("Producto agregado al carrito");
 });
 
@@ -69,6 +77,8 @@ btnP4.addEventListener("click", () => {
   <img src="img/delete.png">
   `;
   productContainer.appendChild(d4);
+  total += 1000;
+  montoTotal.textContent = `$${total.toString()}`;
   alert("Producto agregado al carrito");
 });
 
@@ -82,6 +92,8 @@ btnP5.addEventListener("click", () => {
   <img src="img/delete.png">
   `;
   productContainer.appendChild(d5);
+  total += 750;
+  montoTotal.textContent = `$${total.toString()}`;
   alert("Producto agregado al carrito");
 });
 
@@ -95,5 +107,7 @@ btnP6.addEventListener("click", () => {
   <img src="img/delete.png">
   `;
   productContainer.appendChild(d6);
+  total += 2300;
+  montoTotal.textContent = `$${total.toString()}`;
   alert("Producto agregado al carrito");
 });
