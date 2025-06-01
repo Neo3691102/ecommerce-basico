@@ -2,8 +2,11 @@ const iconoMenu = document.getElementById("iconomenu");
 const closeMenu = document.getElementById("closemenu");
 const menuIzquierdo = document.getElementById("menuIzquierdo");
 const nItems = document.getElementById("numeroitems");
+const iconoCarrito = document.getElementById("iconoCarrito"); // boton carrito
+const carrito = document.getElementById("carrito");
 
-const productContainer = document.querySelector(".productContainer");
+const productContainer = document.querySelector(".productContainer");//contenedor de menu izquierdo
+const cartContainer = document.querySelector(".cart__container");
 const btnP1 = document.getElementById("btn-p1");
 const btnP2 = document.getElementById("btn-p2");
 const btnP3 = document.getElementById("btn-p3");
@@ -19,11 +22,15 @@ iconoMenu.addEventListener("click", () => {
   menuIzquierdo.classList.add("visible");
 });
 
+iconoCarrito.addEventListener("click", () => {
+  carrito.classList.add("visible");
+})
+
 closeMenu.addEventListener("click", () => {
-  menuIzquierdo.classList.remove("visible");
+  carrito.classList.remove("visible");
 });
 
-productContainer.addEventListener("click", (event) => {
+cartContainer.addEventListener("click", (event) => {
   if (event.target.classList.contains("boton-eliminar-producto")) {
     const productoAEliminar = event.target.closest(".productReview");
     console.log(productoAEliminar);
@@ -61,7 +68,7 @@ btnP1.addEventListener("click", () => {
   <h3>Jersey México 2023</h3>
   <img class="boton-eliminar-producto" src="img/delete.png">
   `;
-  productContainer.appendChild(d1);
+  cartContainer.appendChild(d1);
   total += 1000;
   montoTotal.textContent = `${total}`;
 
@@ -79,7 +86,7 @@ btnP2.addEventListener("click", () => {
   <h3>Chamarra</h3>
   <img class="boton-eliminar-producto" src="img/delete.png">
   `;
-  productContainer.appendChild(d2);
+  cartContainer.appendChild(d2);
   total += 2000;
   montoTotal.textContent = `${total.toString()}`;
 
@@ -97,7 +104,7 @@ btnP3.addEventListener("click", () => {
   <h3>Tennis</h3>
   <img class="boton-eliminar-producto" src="img/delete.png">
   `;
-  productContainer.appendChild(d3);
+  cartContainer.appendChild(d3);
   total += 3000;
   montoTotal.textContent = `${total.toString()}`;
 
@@ -115,7 +122,7 @@ btnP4.addEventListener("click", () => {
   <h3>Jersey Alemania</h3>
   <img class="boton-eliminar-producto" src="img/delete.png">
   `;
-  productContainer.appendChild(d4);
+  cartContainer.appendChild(d4);
   total += 1000;
   montoTotal.textContent = `${total.toString()}`;
 
@@ -133,7 +140,7 @@ btnP5.addEventListener("click", () => {
   <h3>Gorra</h3>
   <img class="boton-eliminar-producto" src="img/delete.png">
   `;
-  productContainer.appendChild(d5);
+  cartContainer.appendChild(d5);
   total += 700;
   montoTotal.textContent = `${total.toString()}`;
 
@@ -151,7 +158,7 @@ btnP6.addEventListener("click", () => {
   <h3>Botas</h3>
   <img class="boton-eliminar-producto" src="img/delete.png">
   `;
-  productContainer.appendChild(d6);
+  cartContainer.appendChild(d6);
   total += 2300;
   montoTotal.textContent = `${total.toString()}`;
 
