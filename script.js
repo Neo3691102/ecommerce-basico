@@ -1,8 +1,10 @@
 const iconoMenu = document.getElementById("iconomenu");
-const closeMenu = document.getElementById("closemenu");
+const closeMenuIzq = document.getElementById("x-circle");
 const menuIzquierdo = document.getElementById("menuIzquierdo");
+
 const nItems = document.getElementById("numeroitems");
-const iconoCarrito = document.getElementById("iconoCarrito"); // boton carrito
+const iconoCarrito = document.getElementById("iconoCarrito"); 
+const closeMenu = document.getElementById("closemenu");// boton carrito
 const carrito = document.getElementById("carrito");
 
 const productContainer = document.querySelector(".productContainer");//contenedor de menu izquierdo
@@ -19,8 +21,12 @@ let total = 0;
 const montoTotal = document.getElementById("montoxPagar");
 
 iconoMenu.addEventListener("click", () => {
-  menuIzquierdo.classList.add("visible");
+  menuIzquierdo.classList.add("show");
 });
+
+closeMenuIzq.addEventListener("click", () => {
+  menuIzquierdo.classList.remove("show");
+})
 
 iconoCarrito.addEventListener("click", () => {
   carrito.classList.add("visible");
