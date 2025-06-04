@@ -42,7 +42,7 @@ body {
     width: 120px;
     height: 240px;
     position: fixed;
-    top: 140px;
+    top: 100px;
     left: -400px;
     background-color: $header-color;
     transition: transform 0.5s ease-in-out;
@@ -121,7 +121,7 @@ body {
 
   .banner{
     position: relative;
-    top: 130px;
+    top: 100px;
     width: 100%;
     height: 120px;
     padding: 60px 0;
@@ -344,7 +344,11 @@ body {
 
     .menulateralizquierdo{
       z-index: 1;
-      top: 130px;
+      top: 100px;
+    }
+
+    .banner{
+      top: 100px;
     }
   
     .products {
@@ -392,13 +396,13 @@ body {
 
     .menulateralizquierdo{
       width: 120px;
-      top: 130px;
+      top: 100px;
       z-index: 1;
     }
 
 
     .banner {
-      top: 123px;
+      top: 95px;
       &__title {
         font-size: 24px;
         color: black;
