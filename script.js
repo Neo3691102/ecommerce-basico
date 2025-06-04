@@ -80,6 +80,14 @@ btnP1.addEventListener("click", () => {
 
   nItems.classList.add("numItems");
   nItems.textContent = ++itemsCarrito;
+
+  const producto = {
+    nombre: "Jersey México 2023",
+    precio: 1000
+  }
+
+  localStorage.setItem("producto", JSON.stringify(producto));
+
   alert("Producto agregado al carrito");
 });
 
