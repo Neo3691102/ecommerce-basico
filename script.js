@@ -20,6 +20,8 @@ let itemsCarrito = 0;
 let total = 0;
 const montoTotal = document.getElementById("montoxPagar");
 
+arrayCarrito = [];
+
 iconoMenu.addEventListener("click", () => {
   menuIzquierdo.classList.add("show");
 });
@@ -81,12 +83,14 @@ btnP1.addEventListener("click", () => {
   nItems.classList.add("numItems");
   nItems.textContent = ++itemsCarrito;
 
-  const producto = {
+  const producto1 = {
     nombre: "Jersey México 2023",
     precio: 1000
   }
 
-  localStorage.setItem("producto", JSON.stringify(producto));
+  arrayCarrito.push(producto1);
+
+  localStorage.setItem("producto", JSON.stringify(arrayCarrito));
 
   alert("Producto agregado al carrito");
 });
@@ -106,6 +110,14 @@ btnP2.addEventListener("click", () => {
 
   nItems.classList.add("numItems");
   nItems.textContent = ++itemsCarrito;
+
+  const producto2 = {
+    nombre: "Chamarra",
+    precio: 2000
+  }
+  arrayCarrito.push(producto2);
+  localStorage.setItem("producto", JSON.stringify(arrayCarrito));
+
   alert("Producto agregado al carrito");
 });
 
@@ -124,6 +136,14 @@ btnP3.addEventListener("click", () => {
 
   nItems.classList.add("numItems");
   nItems.textContent = ++itemsCarrito;
+
+  const producto3 = {
+    nombre: "Tennis",
+    precio: 3000
+  }
+  arrayCarrito.push(producto3);
+  localStorage.setItem("producto", JSON.stringify(arrayCarrito));
+  
   alert("Producto agregado al carrito");
 });
 
