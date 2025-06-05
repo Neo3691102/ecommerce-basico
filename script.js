@@ -162,6 +162,14 @@ btnP4.addEventListener("click", () => {
 
   nItems.classList.add("numItems");
   nItems.textContent = ++itemsCarrito;
+
+  const producto4 = {
+    nombre: "Jersey Alemania",
+    precio: 1000
+  }
+  arrayCarrito.push(producto4);
+  localStorage.setItem("producto", JSON.stringify(arrayCarrito));
+
   alert("Producto agregado al carrito");
 });
 
@@ -180,6 +188,13 @@ btnP5.addEventListener("click", () => {
 
   nItems.classList.add("numItems");
   nItems.textContent = ++itemsCarrito;
+
+  const producto5 = {
+    nombre: "Gorra",
+    precio: 700
+  }
+  arrayCarrito.push(producto5);
+  localStorage.setItem("producto", JSON.stringify(arrayCarrito))
   alert("Producto agregado al carrito");
 });
 
@@ -198,5 +213,13 @@ btnP6.addEventListener("click", () => {
 
   nItems.classList.add("numItems");
   nItems.textContent = ++itemsCarrito;
+
+  const producto6 = {
+    nombre: "Botas",
+    precio: 2300
+  }
+  arrayCarrito.push(producto6);
+  localStorage.setItem("producto", JSON.stringify(arrayCarrito));
+
   alert("Producto agregado al carrito");
 });
