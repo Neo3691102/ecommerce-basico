@@ -111,8 +111,8 @@ body {
         font-size: clamp(0.5rem, 0.8vw, 1rem);
         font-weight: 600;
         position: absolute;
-        top: 39px;
-        right: 42px;;
+        top: 24px;
+        right: 45px;;
       }
       }
       
@@ -390,6 +390,7 @@ body {
       }
       #iconoCarrito{
         .numItems{
+          top: 24px;
           right: 12px;
         }
       }
