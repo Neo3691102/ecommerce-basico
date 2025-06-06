@@ -21,6 +21,44 @@ let total = 0;
 const montoTotal = document.getElementById("montoxPagar");
 
 arrayCarrito = [];
+arrayProductos = [
+  {
+    id: 1,
+    nombre: "Jersey Mexico",
+    precio: 1000,
+    src: "img/mx.png"
+  },
+  {
+    id: 2,
+    nombre: "Chamarra",
+    precio: 2000,
+    src: "img/Chamarra.jpg"
+  },
+  {
+    id: 3,
+    nombre: "Tennis",
+    precio: 3000,
+    src: "img/tenis.jpg"
+  },
+  {
+    id: 4,
+    nombre: "Jersey Alemania",
+    precio: 1000,
+    src: "img/germany.jpg"
+  },
+  {
+    id: 5,
+    nombre: "Gorra",
+    precio: 700,
+    src: "img/gorra.jpg"
+  },
+  {
+    id: 6,
+    nombre: "Botas",
+    precio: 2300,
+    src: "img/botas.jpg"
+  }
+];
 
 iconoMenu.addEventListener("click", () => {
   menuIzquierdo.classList.add("show");
@@ -67,98 +105,49 @@ cartContainer.addEventListener("click", (event) => {
   }
 });
 
-arrayProductos = [
-  {
-    id: 1,
-    nombre: "Jersey Mexico",
-    precio: 1000,
-    src: "img/mx.png"
-  },
-  {
-    id: 2,
-    nombre: "Chamarra",
-    precio: 2000,
-    src: "img/Chamarra.jpg"
-  },
-  {
-    id: 3,
-    nombre: "Tennis",
-    precio: 3000,
-    src: "img/tenis.jpg"
-  },
-  {
-    id: 4,
-    nombre: "Jersey Alemania",
-    precio: 1000,
-    src: "img/germany.jpg"
-  },
-  {
-    id: 5,
-    nombre: "Gorra",
-    precio: 700,
-    src: "img/gorra.jpg"
-  },
-  {
-    id: 6,
-    nombre: "Botas",
-    precio: 2300,
-    src: "img/botas.jpg"
-  }
-]
-
-btnP1.addEventListener("click", () => {
-  const d1 = document.createElement("div");
-  d1.classList.add("productReview");
-
-  const idItem = 1;
+const crearElementoDivCarrito = (idItem, div) => {
   const { nombre, precio, src } = arrayProductos.find(({ id }) => id === idItem);
 
   console.log(nombre);
 
-  d1.innerHTML = `
+  div.innerHTML = `
     <img src="${src}">
     <p>${precio}</p>
     <h3>${nombre}</h3>
     <img class="boton-eliminar-producto" src="img/delete.png">
   `;
 
-  cartContainer.appendChild(d1);
+  cartContainer.appendChild(div);
   total += precio;
   montoTotal.textContent = `${total}`;
 
   nItems.classList.add("numItems");
   nItems.textContent = ++itemsCarrito;
 
-  const producto1 = { nombre, precio };
-  arrayCarrito.push(producto1);
+  const producto = { nombre, precio };
+  arrayCarrito.push(producto);
 
   localStorage.setItem("producto", JSON.stringify(arrayCarrito));
+}
+
+btnP1.addEventListener("click", () => {
+  const d1 = document.createElement("div");
+  d1.classList.add("productReview");
+
+  const idItm = 1;
+  crearElementoDivCarrito(idItm, d1);
+  
 
   alert("Producto agregado al carrito");
 });
 
+
 btnP2.addEventListener("click", () => {
   const d2 = document.createElement("div");
   d2.classList.add("productReview");
-  d2.innerHTML = `
-  <img src="img/Chamarra.jpg">
-  <p>2000</p>
-  <h3>Chamarra</h3>
-  <img class="boton-eliminar-producto" src="img/delete.png">
-  `;
-  cartContainer.appendChild(d2);
-  total += 2000;
-  montoTotal.textContent = `${total.toString()}`;
 
-  nItems.classList.add("numItems");
-  nItems.textContent = ++itemsCarrito;
-
-  const producto2 = {
-    nombre: "Chamarra",
-    precio: 2000
-  }
-  arrayCarrito.push(producto2);
-  localStorage.setItem("producto", JSON.stringify(arrayCarrito));
+ const idItm = 2;
+  crearElementoDivCarrito(idItm, d2);
 
   alert("Producto agregado al carrito");
 });
@@ -166,25 +155,9 @@ btnP2.addEventListener("click", () => {
 btnP3.addEventListener("click", () => {
   const d3 = document.createElement("div");
   d3.classList.add("productReview");
-  d3.innerHTML = `
-  <img src="img/tenis.jpg">
-  <p>3000</p>
-  <h3>Tennis</h3>
-  <img class="boton-eliminar-producto" src="img/delete.png">
-  `;
-  cartContainer.appendChild(d3);
-  total += 3000;
-  montoTotal.textContent = `${total.toString()}`;
-
-  nItems.classList.add("numItems");
-  nItems.textContent = ++itemsCarrito;
-
-  const producto3 = {
-    nombre: "Tennis",
-    precio: 3000
-  }
-  arrayCarrito.push(producto3);
-  localStorage.setItem("producto", JSON.stringify(arrayCarrito));
+  
+  const idItm = 3;
+  crearElementoDivCarrito(idItm, d3);
   
   alert("Producto agregado al carrito");
 });
@@ -192,25 +165,9 @@ btnP3.addEventListener("click", () => {
 btnP4.addEventListener("click", () => {
   const d4 = document.createElement("div");
   d4.classList.add("productReview");
-  d4.innerHTML = `
-  <img src="img/germany.jpg">
-  <p>1000</p>
-  <h3>Jersey Alemania</h3>
-  <img class="boton-eliminar-producto" src="img/delete.png">
-  `;
-  cartContainer.appendChild(d4);
-  total += 1000;
-  montoTotal.textContent = `${total.toString()}`;
-
-  nItems.classList.add("numItems");
-  nItems.textContent = ++itemsCarrito;
-
-  const producto4 = {
-    nombre: "Jersey Alemania",
-    precio: 1000
-  }
-  arrayCarrito.push(producto4);
-  localStorage.setItem("producto", JSON.stringify(arrayCarrito));
+  
+  const idItm = 4;
+  crearElementoDivCarrito(idItm, d4);
 
   alert("Producto agregado al carrito");
 });
@@ -218,50 +175,19 @@ btnP4.addEventListener("click", () => {
 btnP5.addEventListener("click", () => {
   const d5 = document.createElement("div");
   d5.classList.add("productReview");
-  d5.innerHTML = `
-  <img src="img/gorra.jpg">
-  <p>700</p>
-  <h3>Gorra</h3>
-  <img class="boton-eliminar-producto" src="img/delete.png">
-  `;
-  cartContainer.appendChild(d5);
-  total += 700;
-  montoTotal.textContent = `${total.toString()}`;
 
-  nItems.classList.add("numItems");
-  nItems.textContent = ++itemsCarrito;
+  const idItm = 5;
+  crearElementoDivCarrito(idItm, d5);
 
-  const producto5 = {
-    nombre: "Gorra",
-    precio: 700
-  }
-  arrayCarrito.push(producto5);
-  localStorage.setItem("producto", JSON.stringify(arrayCarrito))
   alert("Producto agregado al carrito");
 });
 
 btnP6.addEventListener("click", () => {
   const d6 = document.createElement("div");
   d6.classList.add("productReview");
-  d6.innerHTML = `
-  <img src="img/botas.jpg">
-  <p>2300</p>
-  <h3>Botas</h3>
-  <img class="boton-eliminar-producto" src="img/delete.png">
-  `;
-  cartContainer.appendChild(d6);
-  total += 2300;
-  montoTotal.textContent = `${total.toString()}`;
 
-  nItems.classList.add("numItems");
-  nItems.textContent = ++itemsCarrito;
-
-  const producto6 = {
-    nombre: "Botas",
-    precio: 2300
-  }
-  arrayCarrito.push(producto6);
-  localStorage.setItem("producto", JSON.stringify(arrayCarrito));
+  const idItm = 6;
+  crearElementoDivCarrito(idItm, d6);
 
   alert("Producto agregado al carrito");
 });
