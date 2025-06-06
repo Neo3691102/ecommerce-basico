@@ -67,27 +67,69 @@ cartContainer.addEventListener("click", (event) => {
   }
 });
 
+arrayProductos = [
+  {
+    id: 1,
+    nombre: "Jersey Mexico",
+    precio: 1000,
+    src: "img/mx.png"
+  },
+  {
+    id: 2,
+    nombre: "Chamarra",
+    precio: 2000,
+    src: "img/Chamarra.jpg"
+  },
+  {
+    id: 3,
+    nombre: "Tennis",
+    precio: 3000,
+    src: "img/tenis.jpg"
+  },
+  {
+    id: 4,
+    nombre: "Jersey Alemania",
+    precio: 1000,
+    src: "img/germany.jpg"
+  },
+  {
+    id: 5,
+    nombre: "Gorra",
+    precio: 700,
+    src: "img/gorra.jpg"
+  },
+  {
+    id: 6,
+    nombre: "Botas",
+    precio: 2300,
+    src: "img/botas.jpg"
+  }
+]
+
 btnP1.addEventListener("click", () => {
   const d1 = document.createElement("div");
   d1.classList.add("productReview");
+
+  const idItem = 1;
+  const { nombre, precio, src } = arrayProductos.find(({ id }) => id === idItem);
+
+  console.log(nombre);
+
   d1.innerHTML = `
-  <img src="img/mx.png">
-  <p>1000</p>
-  <h3>Jersey México 2023</h3>
-  <img class="boton-eliminar-producto" src="img/delete.png">
+    <img src="${src}">
+    <p>${precio}</p>
+    <h3>${nombre}</h3>
+    <img class="boton-eliminar-producto" src="img/delete.png">
   `;
+
   cartContainer.appendChild(d1);
-  total += 1000;
+  total += precio;
   montoTotal.textContent = `${total}`;
 
   nItems.classList.add("numItems");
   nItems.textContent = ++itemsCarrito;
 
-  const producto1 = {
-    nombre: "Jersey México 2023",
-    precio: 1000
-  }
-
+  const producto1 = { nombre, precio };
   arrayCarrito.push(producto1);
 
   localStorage.setItem("producto", JSON.stringify(arrayCarrito));
