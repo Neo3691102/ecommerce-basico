@@ -151,6 +151,40 @@ body {
   color: black;
   box-shadow: 3px 3px 6px gray;
 }
+.products .products__counter {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 9px 0;
+}
+.products .products__counter #counterminus {
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.products .products__counter #counterminus:hover {
+  background-color: #fff;
+  border: 2px solid #0086DF;
+  color: black;
+  box-shadow: 3px 3px 6px gray;
+}
+.products .products__counter .cantidad {
+  margin: 0 9px 0 9px;
+  font-weight: 600;
+}
+.products .products__counter #counterplus {
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.products .products__counter #counterplus:hover {
+  background-color: #fff;
+  border: 2px solid #0086DF;
+  color: black;
+  box-shadow: 3px 3px 6px gray;
+}
 
 .cart {
   width: 400px;

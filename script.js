@@ -4,10 +4,14 @@ const menuIzquierdo = document.getElementById("menuIzquierdo");
 
 const nItems = document.getElementById("numeroitems");
 const iconoCarrito = document.getElementById("iconoCarrito"); 
-const closeMenu = document.getElementById("closemenu");// boton carrito
+const closeMenu = document.getElementById("closemenu");
 const carrito = document.getElementById("carrito");
 
-const productContainer = document.querySelector(".productContainer");//contenedor de menu izquierdo
+const btnMinus = document.getElementById("counterminus");
+
+const btnPlus = document.getElementById("counterplus");
+
+const productContainer = document.querySelector(".productContainer");
 const cartContainer = document.querySelector(".cart__container");
 const btnP1 = document.getElementById("btn-p1");
 const btnP2 = document.getElementById("btn-p2");
