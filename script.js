@@ -7,9 +7,84 @@ const iconoCarrito = document.getElementById("iconoCarrito");
 const closeMenu = document.getElementById("closemenu");
 const carrito = document.getElementById("carrito");
 
-const btnMinus = document.getElementById("counterminus");
-
-const btnPlus = document.getElementById("counterplus");
+const btnMinus1 = document.getElementById("counterminusp1");
+const btnPlus1 = document.getElementById("counterplusp1");
+const cantidadp1 = document.getElementById("cantidadp1");
+btnMinus1.addEventListener("click", () => {
+  if(cantidadp1.textContent === "0"){
+    cantidadp1.textContent = "0";
+  }else{
+    cantidadp1.textContent = parseInt(cantidadp1.textContent) - 1;
+  }
+})
+btnPlus1.addEventListener("click", () => {
+  cantidadp1.textContent = parseInt(cantidadp1.textContent) + 1;
+});
+const btnMinus2 = document.getElementById("counterminusp2");
+const btnPlus2 = document.getElementById("counterplusp2");
+const cantidadp2 = document.getElementById("cantidadp2");
+btnMinus2.addEventListener("click", () => {
+  if(cantidadp2.textContent === "0"){
+    cantidadp2.textContent = "0";
+  }else{
+    cantidadp2.textContent = parseInt(cantidadp2.textContent) - 1;
+  }
+})
+btnPlus2.addEventListener("click", () => {
+  cantidadp2.textContent = parseInt(cantidadp2.textContent) + 1;
+});
+const btnMinus3 = document.getElementById("counterminusp3");
+const btnPlus3 = document.getElementById("counterplusp3");
+const cantidadp3 = document.getElementById("cantidadp3");
+btnMinus3.addEventListener("click", () => {
+  if(cantidadp3.textContent === "0"){
+    cantidadp3.textContent = "0";
+  }else{
+    cantidadp3.textContent = parseInt(cantidadp3.textContent) - 1;
+  }
+})
+btnPlus3.addEventListener("click", () => {
+  cantidadp3.textContent = parseInt(cantidadp3.textContent) + 1;
+});
+const btnMinus4 = document.getElementById("counterminusp4");
+const btnPlus4 = document.getElementById("counterplusp4");
+const cantidadp4 = document.getElementById("cantidadp4");
+btnMinus4.addEventListener("click", () => {
+  if(cantidadp4.textContent === "0"){
+    cantidadp4.textContent = "0";
+  }else{
+    cantidadp4.textContent = parseInt(cantidadp4.textContent) - 1;
+  }
+})
+btnPlus4.addEventListener("click", () => {
+  cantidadp4.textContent = parseInt(cantidadp4.textContent) + 1;
+});
+const btnMinus5 = document.getElementById("counterminusp5");
+const btnPlus5 = document.getElementById("counterplusp5");
+const cantidadp5 = document.getElementById("cantidadp5");
+btnMinus5.addEventListener("click", () => {
+  if(cantidadp5.textContent === "0"){
+    cantidadp5.textContent = "0";
+  }else{
+    cantidadp5.textContent = parseInt(cantidadp5.textContent) - 1;
+  }
+})
+btnPlus5.addEventListener("click", () => {
+  cantidadp5.textContent = parseInt(cantidadp5.textContent) + 1;
+});
+const btnMinus6 = document.getElementById("counterminusp6");
+const btnPlus6 = document.getElementById("counterplusp6");
+const cantidadp6 = document.getElementById("cantidadp6");
+btnMinus6.addEventListener("click", () => {
+  if(cantidadp6.textContent === "0"){
+    cantidadp6.textContent = "0";
+  }else{
+    cantidadp6.textContent = parseInt(cantidadp6.textContent) - 1;
+  }
+})
+btnPlus6.addEventListener("click", () => {
+  cantidadp6.textContent = parseInt(cantidadp6.textContent) + 1;
+});
 
 const productContainer = document.querySelector(".productContainer");
 const cartContainer = document.querySelector(".cart__container");
