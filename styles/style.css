@@ -156,14 +156,14 @@ body {
   justify-content: center;
   margin: 0 0 9px 0;
 }
-.products .products__counter #counterminus {
+.products .products__counter .counterminus {
   background-color: black;
   color: white;
   font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
 }
-.products .products__counter #counterminus:hover {
+.products .products__counter .counterminus:hover {
   background-color: #fff;
   border: 2px solid #0086DF;
   color: black;
@@ -173,13 +173,13 @@ body {
   margin: 0 9px 0 9px;
   font-weight: 600;
 }
-.products .products__counter #counterplus {
+.products .products__counter .counterplus {
   background-color: black;
   color: white;
   border-radius: 6px;
   cursor: pointer;
 }
-.products .products__counter #counterplus:hover {
+.products .products__counter .counterplus:hover {
   background-color: #fff;
   border: 2px solid #0086DF;
   color: black;
