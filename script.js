@@ -191,8 +191,8 @@ const crearElementoDivCarrito = (idItem, cantidad, div) => {
 
   div.innerHTML = `
     <img src="${src}">
-    <p>x${cantidad}</p>
     <p>${precio}</p>
+    <p>x${cantidad}</p>
     <h3>${nombre}</h3>
     <img class="boton-eliminar-producto" src="img/delete.png">
   `;//Cantidad de producto
