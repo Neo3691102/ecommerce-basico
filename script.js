@@ -92,7 +92,7 @@ const btnP1 = document.getElementById("btn-p1");
 const btnP2 = document.getElementById("btn-p2");
 const btnP3 = document.getElementById("btn-p3");
 const btnP4 = document.getElementById("btn-p4");
-const btnP5 = document.getElementById("btn-p5");
+const btnP5 = document.getElementById("btn-p5"); 
 const btnP6 = document.getElementById("btn-p6");
 
 let itemsCarrito = 0;
@@ -184,17 +184,18 @@ cartContainer.addEventListener("click", (event) => {
   }
 });
 
-const crearElementoDivCarrito = (idItem, div) => {
-  const { nombre, precio, src } = arrayProductos.find(({ id }) => id === idItem);
+const crearElementoDivCarrito = (idItem, cantidad, div) => {
+  let { nombre, precio, src } = arrayProductos.find(({ id }) => id === idItem);
 
-  console.log(nombre);
+  precio = cantidad * precio;
 
   div.innerHTML = `
     <img src="${src}">
+    <p>x${cantidad}</p>
     <p>${precio}</p>
     <h3>${nombre}</h3>
     <img class="boton-eliminar-producto" src="img/delete.png">
-  `;
+  `;//Cantidad de producto
 
   cartContainer.appendChild(div);
   total += precio;
@@ -214,7 +215,15 @@ btnP1.addEventListener("click", () => {
   d1.classList.add("productReview");
 
   const idItm = 1;
-  crearElementoDivCarrito(idItm, d1);
+  const cantidad = parseInt(cantidadp1.textContent);
+  if(cantidad === 0){
+    alert("Por favor, selecciona una cantidad mayor a 0");
+    return;
+  }else{
+    console.log(cantidad);
+    crearElementoDivCarrito(idItm, cantidad, d1);
+  }
+  
   
 
   alert("Producto agregado al carrito");
