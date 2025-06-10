@@ -235,7 +235,15 @@ btnP2.addEventListener("click", () => {
   d2.classList.add("productReview");
 
  const idItm = 2;
-  crearElementoDivCarrito(idItm, d2);
+ const cantidad = parseInt(cantidadp2.textContent);
+  if(cantidad === 0){
+    alert("Por favor, selecciona una cantidad mayor a 0");
+    return;
+  }else{
+    console.log(cantidad);
+    crearElementoDivCarrito(idItm, cantidad, d2);
+  }
+  
 
   alert("Producto agregado al carrito");
 });
@@ -245,7 +253,14 @@ btnP3.addEventListener("click", () => {
   d3.classList.add("productReview");
   
   const idItm = 3;
-  crearElementoDivCarrito(idItm, d3);
+  const cantidad = parseInt(cantidadp3.textContent);
+  if(cantidad === 0){
+    alert("Por favor, selecciona una cantidad mayor a 0");
+    return;
+  }else{
+    console.log(cantidad);
+    crearElementoDivCarrito(idItm, cantidad, d3);
+  }
   
   alert("Producto agregado al carrito");
 });
@@ -255,7 +270,14 @@ btnP4.addEventListener("click", () => {
   d4.classList.add("productReview");
   
   const idItm = 4;
-  crearElementoDivCarrito(idItm, d4);
+  const cantidad = parseInt(cantidadp4.textContent);
+  if(cantidad === 0){
+    alert("Por favor, selecciona una cantidad mayor a 0");
+    return;
+  }else{
+    console.log(cantidad);
+    crearElementoDivCarrito(idItm, cantidad, d4);
+  }
 
   alert("Producto agregado al carrito");
 });
@@ -265,7 +287,14 @@ btnP5.addEventListener("click", () => {
   d5.classList.add("productReview");
 
   const idItm = 5;
-  crearElementoDivCarrito(idItm, d5);
+  const cantidad = parseInt(cantidadp5.textContent);
+  if(cantidad === 0){
+    alert("Por favor, selecciona una cantidad mayor a 0");
+    return;
+  }else{
+    console.log(cantidad);
+    crearElementoDivCarrito(idItm, cantidad, d5);
+  }
 
   alert("Producto agregado al carrito");
 });
@@ -275,7 +304,14 @@ btnP6.addEventListener("click", () => {
   d6.classList.add("productReview");
 
   const idItm = 6;
-  crearElementoDivCarrito(idItm, d6);
+  const cantidad = parseInt(cantidadp6.textContent);
+  if(cantidad === 0){
+    alert("Por favor, selecciona una cantidad mayor a 0");
+    return;
+  }else{
+    console.log(cantidad);
+    crearElementoDivCarrito(idItm, cantidad, d6);
+  }
 
   alert("Producto agregado al carrito");
 });
